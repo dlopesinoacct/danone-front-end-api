@@ -1,0 +1,46 @@
+{
+  "memory": 256,
+  "ttl": 10,
+  "timeout": 2,
+  "minReplicas": 2,
+  "maxReplicas": 4,
+  "workers": 1,
+  "routes": {
+    "getMDPostalCode": {
+      "path": "/getpostalcode",
+      "public": true
+    },
+    "getWindowsNektria": {
+      "path": "/getwindows",
+      "public": true
+    },
+    "sendOrderNektria": {
+      "path": "/sendorder",
+      "public": true
+    },
+    "cancelOrderNektria": {
+      "path": "/cancelorder",
+      "public": true
+    },
+    "updateCustomOrderForm": {
+      "path": "/updatenotes",
+      "public": true
+    },
+    "getMDClientData": {
+      "path": "/masterdata/client/getdata",
+      "public": true
+    },
+    "updateMDClientData": {
+      "path": "/masterdata/client/updatedata",
+      "public": true
+    },
+    "invoiceOrder": {
+      "path": "/invoice/order",
+      "public": true
+    },
+    "invoiceReturn": {
+      "path": "/invoice/return",
+      "public": true
+    }
+  }
+}

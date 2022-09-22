@@ -1,0 +1,146 @@
+{
+  "name": "danonees-frontend-api",
+  "vendor": "danonees",
+  "version": "0.0.4",
+  "title": "Danone front end api",
+  "description": "App to safely make calls to the MasterData API",
+  "mustUpdateAt": "2018-01-04",
+  "categories": [],
+  "dependencies": {
+    "vtex.catalog-api-proxy": "0.x"
+  },
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "scripts": {
+    "prereleasy": "bash lint.sh"
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "vtex.catalog-api-proxy:catalog-proxy"
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "uesnexb000.housings.nexica.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{workspace}}--{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "yieldmanager.staging.nektria.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "yieldmanager.nektria.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "routemanager.staging.nektria.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "routemanager.nektria.net",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "api.vtex.com",
+        "path": "*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema",
+  "settingsSchema": {
+    "title": "Api Authentication",
+    "type": "object",
+    "properties": {
+      "apiKey": {
+        "title": "Front end Api Key",
+        "description": "Enter the Api Key from your Unileverytu account",
+        "type": "string"
+      },
+      "apiToken": {
+        "title": "Front end Api Token",
+        "description": "Enter the Api Token from your Unileverytu account",
+        "type": "string"
+      },
+      "nektriaApiKey": {
+        "title": "Nektria Api Key",
+        "description": "Enter the Api Key from your Nektria account",
+        "type": "string"
+      },
+      "fvecUser": {
+        "title": "FVEC User",
+        "description": "Enter the FVEC User",
+        "type": "string"
+      },
+      "fvecPassword": {
+        "title": "FVEC Password",
+        "description": "Enter the FVEC Password",
+        "type": "string"
+      }
+    }
+  }
+}
